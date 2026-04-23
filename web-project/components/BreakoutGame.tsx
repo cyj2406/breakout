@@ -27,8 +27,8 @@ const BRICKS_TOTAL_WIDTH = (BRICK_COLS * BRICK_WIDTH) + ((BRICK_COLS - 1) * BRIC
 const BRICKS_OFFSET_X = (CANVAS_WIDTH - BRICKS_TOTAL_WIDTH) / 2;
 const BRICKS_OFFSET_Y = 60;
 
-// 배포하신 웹 앱 URL
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIVF-yhPFBhL4TLAvqUIiNVUkOz6-nSYcIRGn89thqneXrw_c9Bm7AVQUB7W1wPE1v/exec"; 
+// 환경 변수에서 웹 앱 URL을 가져옵니다.
+const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || ""; 
 
 interface RankingEntry { name: string; time: number; formattedTime: string; }
 
